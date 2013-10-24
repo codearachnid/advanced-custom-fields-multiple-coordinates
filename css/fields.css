@@ -1,0 +1,43 @@
+/*
+ * This file is part of Advanced Custom Fields Multiple Coordinates.
+ *
+ * Advanced Custom Fields Multiple Coordinates is free software: you can redistribute it
+ * and/or modify it under the terms of the GNU General Public License as
+ * published by he Free Software Foundation, either version 3 of the License,
+ * or (at your option) any later version.
+ *
+ * Advanced Custom Fields Multiple Coordinates is distributed in the hope that it will
+ * be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Advanced Custom Fields Multiple Coordinates.
+ * If not, see <http://www.gnu.org/licenses/>.
+ */
+
+
+.location_multiple_coordinates_input_search {
+    margin-bottom: 12px;
+}
+
+.location_multiple_coordinates_map_container {
+    padding: 4px;
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+    margin-left: 1px;
+}
+
+.location_multiple_coordinates_map {
+    height: 300px;
+}
+
+.location_multiple_coordinates_coordinates_button {
+    display: inline;
+    margin: 0;
+}
+
+.location_multiple_coordinates_coordinates_div{
+    display: block;
+    margin: 0;
+}
