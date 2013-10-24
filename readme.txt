@@ -8,8 +8,7 @@ Stable tag: 1.0.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
-This add-on to [Advanced Custom Fields (ACF)](http://www.advancedcustomfields.com/ "Advanced Custom Fields")
-makes it easy to add multiple coordinates to your posts by searching a location and drop one or more points on a visual Google Map.
+This is an add-on to ACF that adds a field to select multiple Google Map points in a post.
 
 == Description ==
 
@@ -36,6 +35,11 @@ sure to also have ACF installed.
 When you create a new custom field with ACF, set the field type to
 **Multiple Coordinates map**. Now the coordinates chooser should show up when you edit
 a post with your custom fields.
+
+The tool add a point on each click on the map. To remove the point you select the "Remove Coordinate" button and click a point.
+You can also show the points as a Polygon on the map with the "Show area on map" button and show the actual coordinates in a semi-colon
+separated list with the "Show coordinates" button. The search field is only there to quickly take you to different places on the map. Not
+to add the actual points.
 
 To get the coordinates data in your frontend, simply request the field value
 and in return you get the coordinates in a latitude, longitude array and the zoom as in the sample below.
