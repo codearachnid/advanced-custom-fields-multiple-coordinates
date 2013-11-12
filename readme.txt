@@ -2,9 +2,9 @@
 
 Contributors: web111se
 Requires at least: 3.4.0
-Tags: admin, advanced custom field, custom field, acf, google maps, maps, gmap, map, points, polygon, multiple points
-Tested up to: 3.6.1
-Stable tag: 1.0.0
+Tags: admin, advanced custom field, custom field, acf, google maps, maps, gmap, map, points, polygon, multiple points, coordinates, multiple coordinates, polyline
+Tested up to: 3.7.1
+Stable tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.html
 
@@ -82,6 +82,12 @@ By implementing a map on your own. We do not provide a frontend-implementation -
 
 == Changelog ==
 
+= 1.0.1 =
+
+* Bugfix 1. Get lat and lng from Marker via correct API function.
+* Bugfix 2. Toggle Show area on map button now works.
+* Optimized init of map when many markers.
+ 
 = 1.0.0 =
 
 * First release.

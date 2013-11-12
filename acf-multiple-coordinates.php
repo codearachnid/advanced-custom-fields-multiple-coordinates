@@ -4,7 +4,7 @@
 Plugin Name: Advanced Custom Fields: Multiple Coordinates
 Plugin URI: http://wordpress.org/plugins/advanced-custom-fields-multiple-coordinates/
 Description: Adds a multiple coordinates map field to Advanced Custom Fields. This field allows you to set the coordinates of one or more locations.
-Version: 1.0.0
+Version: 1.0.1
 Author: Jonas Hjalmarsson
 Author URI: http://coder.web111.se/
 License: GPL

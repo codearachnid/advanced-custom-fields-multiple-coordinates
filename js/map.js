@@ -61,7 +61,7 @@ jQuery(function($) {
 		this.marker = Array();
 		for (var i = 0; i < values["coords"].length; i++) {
 			var position = new google.maps.LatLng(values["coords"][i].lat, values["coords"][i].lng);
-			this.AddMarker(position);
+			this.AddMarker(position,false);
 		}
 		this.poly = "";
 
@@ -165,7 +165,8 @@ jQuery(function($) {
          *
          * @param   marker
          */
-        var AddMarker = function(position) {
+        var AddMarker = function(position, updateui) {
+			updateui = typeof updateui !== 'undefined' ? updateui : true;
 			var self = this;
 			if (!self.remove_marker_mode) {
 				// Add marker
@@ -179,7 +180,8 @@ jQuery(function($) {
 				self.marker[self.marker_count].myID = self.marker_count;
 				self.marker[self.marker_count].setPosition(position);
 				console.log("marker added");
-				self.UpdateUI();
+				if (updateui)
+					self.UpdateUI();
 			}
 			google.maps.event.addListener(self.marker[self.marker_count], 'click', function(mapEvent) {
 				self.RemoveMarker(this);
@@ -250,8 +252,8 @@ jQuery(function($) {
 			var polycoords = new Array();
 			for (var i = 0; i < self.marker.length; i++) {
 				if (self.marker[i] != null) {
-					lat = self.marker[i].getPosition().lb
-					lng = self.marker[i].getPosition().mb
+					lat = self.marker[i].getPosition().lat();
+					lng = self.marker[i].getPosition().lng();
 					polycoords.push(new google.maps.LatLng(lat, lng));
 					coords += lat + "," + lng + "; ";  
 					values["coords"][v] = {
@@ -278,7 +280,11 @@ jQuery(function($) {
 				});
 				self.poly.setMap(self.map);
 			}
-            self.coordinates_button.val("Show coordinates (" + values["coords"].length + ")");
+			else if (!self.show_area_button.hasClass("button-primary")) {
+				if (self.poly !== "")
+					self.poly.setMap(null);
+			}
+			self.coordinates_button.val("Show coordinates (" + values["coords"].length + ")");
             self.coordinates_elm.text(coords);
 			self.values_elm.val(JSON.stringify(values));
 			return;
